@@ -14,8 +14,8 @@ app.add_url_rule('/date',view_func=fn.printDate)
 #app.add_url_rule('/square/<n>',view_func=fn.square(n))
 
 @app.route('/square/<int:n>')
-def sq(n):
-    return str(n**2)
+def square_func(n):
+    return fn.square(n)
 
 if __name__ == '__main__':
     app.run(debug=True)

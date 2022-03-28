@@ -7,4 +7,4 @@ def printDate():
 
 #Unable to import and run functions with arguments
 def square(n):
-    return n**2
+    return str(n**2)

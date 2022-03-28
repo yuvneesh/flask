@@ -5,5 +5,6 @@ def printDate():
     x = x.strftime("%B %d, %Y")
     return x
 
-#Alternate to app.route decorator is the app.add_url_rule function. Both of these were tested succesfully here.
-#app.add_url_rule('/date', view_func=printDate)
+#Unable to import and run functions with arguments
+def square(n):
+    return n**2

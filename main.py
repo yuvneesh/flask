@@ -7,4 +7,4 @@ def main_function():
     return 'This is a main function'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import functions as fn
 
 
@@ -17,16 +17,9 @@ app.add_url_rule('/date',view_func=fn.printDate)
 def square_func(n):
     return fn.square(n)
 
-@app.route('/render-html')
-def render_html():
-    html = """
-    <html>
-    <body>
-    <h1> This is a rendered page </h1>
-    </body>
-    </head>
-    """
-    return html
+@app.route('/render-html/<printThis>')
+def render_html(printThis):
+    return render_template('basicFirst.html', arg0 = printThis)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

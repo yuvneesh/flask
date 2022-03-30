@@ -17,5 +17,16 @@ app.add_url_rule('/date',view_func=fn.printDate)
 def square_func(n):
     return fn.square(n)
 
+@app.route('/render-html')
+def render_html():
+    html = """
+    <html>
+    <body>
+    <h1> This is a rendered page </h1>
+    </body>
+    </head>
+    """
+    return html
+
 if __name__ == '__main__':
     app.run(debug=True)

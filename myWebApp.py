@@ -5,7 +5,7 @@ import functions as fn
 app = Flask(__name__)
 
 @app.route('/')
-def main_function():
+def home():
     return render_template('home.html')
 
 app.add_url_rule('/date',view_func=fn.printDate)
@@ -17,9 +17,9 @@ app.add_url_rule('/date',view_func=fn.printDate)
 def square_func(n):
     return fn.square(n)
 
-@app.route('/render-html/<printThis>')
-def render_html(printThis):
-    return render_template('basicFirst.html', arg0 = printThis)
+@app.route('/exercises')
+def exercises():
+    return render_template('exercises.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

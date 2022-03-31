@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_function():
-    return 'This is a main function, but modified'
+    return render_template('home.html')
 
 app.add_url_rule('/date',view_func=fn.printDate)
 
@@ -22,4 +22,4 @@ def render_html(printThis):
     return render_template('basicFirst.html', arg0 = printThis)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -17,9 +17,5 @@ app.add_url_rule('/date',view_func=fn.printDate)
 def square_func(n):
     return fn.square(n)
 
-@app.route('/exercises')
-def exercises():
-    return render_template('exercises.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
